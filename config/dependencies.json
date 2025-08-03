@@ -1,6 +1,19 @@
 {
-  "description": "新闻源开发所需的依赖包配置",
+  "description": "NewsNow 项目完整依赖包配置 - 包含新闻源开发和API服务所需的所有依赖",
+  "version": "1.0.0",
+  "lastUpdated": "2025-01-03",
   "categories": {
+    "api": {
+      "description": "API服务相关 - 用于对外提供新闻数据API",
+      "dependencies": {
+        "@modelcontextprotocol/sdk": "^1.11.0",
+        "h3": "^1.15.1",
+        "jose": "^5.9.6",
+        "cookie-es": "^2.0.0",
+        "uncrypto": "^0.1.3"
+      },
+      "devDependencies": {}
+    },
     "core": {
       "description": "核心依赖 - 新闻数据获取必需的包",
       "dependencies": {
@@ -81,19 +94,30 @@
         "@types/react": "^19.0.10",
         "@types/react-dom": "^19.0.4"
       }
+    },
+    "scripts": {
+      "description": "脚本工具 - 用于数据导出和自动化任务",
+      "dependencies": {
+        "commander": "^12.0.0"
+      },
+      "devDependencies": {}
     }
   },
   "installation": {
     "description": "安装说明",
     "commands": {
       "all": "pnpm install",
+      "api_only": "pnpm add @modelcontextprotocol/sdk h3 jose cookie-es uncrypto",
       "core_only": "pnpm add ofetch cheerio fast-xml-parser dayjs zod",
       "dev_only": "pnpm add -D @types/md5 vitest mockdate tsx typescript",
+      "production": "pnpm install --production",
       "specific_category": "根据需要安装特定分类的依赖"
     },
     "notes": [
       "项目使用 pnpm 作为包管理器",
-      "核心依赖是必需的，其他依赖可根据需要选择性安装",
+      "API依赖是对外提供服务必需的",
+      "核心依赖是新闻数据获取必需的",
+      "其他依赖可根据需要选择性安装",
       "开发依赖仅在开发环境中需要",
       "某些依赖可能需要特定的 Node.js 版本"
     ]
@@ -156,12 +180,17 @@
   },
   "scripts": {
     "description": "常用的npm脚本命令",
+    "install_api": "pnpm add @modelcontextprotocol/sdk h3 jose cookie-es uncrypto",
     "install_core": "pnpm add ofetch cheerio fast-xml-parser dayjs zod consola",
+    "install_database": "pnpm add better-sqlite3 db0",
     "install_dev": "pnpm add -D @types/md5 vitest mockdate tsx typescript",
+    "install_scripts": "pnpm add commander",
     "install_optional": "pnpm add puppeteer jsdom lodash",
+    "install_all_production": "pnpm add @modelcontextprotocol/sdk h3 jose cookie-es uncrypto ofetch cheerio fast-xml-parser dayjs zod consola better-sqlite3 db0 iconv-lite md5 defu clsx commander",
     "update_all": "pnpm update",
     "check_outdated": "pnpm outdated",
-    "audit": "pnpm audit"
+    "audit": "pnpm audit",
+    "clean_install": "rm -rf node_modules pnpm-lock.yaml && pnpm install"
   },
   "troubleshooting": {
     "common_issues": [
