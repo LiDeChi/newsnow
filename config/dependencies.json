@@ -1,0 +1,190 @@
+{
+  "description": "新闻源开发所需的依赖包配置",
+  "categories": {
+    "core": {
+      "description": "核心依赖 - 新闻数据获取必需的包",
+      "dependencies": {
+        "ofetch": "^1.4.1",
+        "cheerio": "^1.0.0",
+        "fast-xml-parser": "^5.0.8",
+        "dayjs": "1.11.13",
+        "zod": "^3.24.2"
+      },
+      "devDependencies": {}
+    },
+    "http": {
+      "description": "HTTP请求相关 - 用于网络请求和代理",
+      "dependencies": {
+        "ofetch": "^1.4.1",
+        "h3": "^1.15.1",
+        "uncrypto": "^0.1.3"
+      },
+      "devDependencies": {}
+    },
+    "parsing": {
+      "description": "数据解析相关 - 用于HTML、XML、JSON解析",
+      "dependencies": {
+        "cheerio": "^1.0.0",
+        "fast-xml-parser": "^5.0.8",
+        "iconv-lite": "^0.6.3"
+      },
+      "devDependencies": {}
+    },
+    "utilities": {
+      "description": "工具库 - 用于数据处理和格式化",
+      "dependencies": {
+        "dayjs": "1.11.13",
+        "md5": "^2.3.0",
+        "defu": "^6.1.4",
+        "clsx": "^2.1.1"
+      },
+      "devDependencies": {
+        "@types/md5": "^2.3.5"
+      }
+    },
+    "validation": {
+      "description": "数据验证 - 用于验证和类型检查",
+      "dependencies": {
+        "zod": "^3.24.2"
+      },
+      "devDependencies": {}
+    },
+    "database": {
+      "description": "数据库相关 - 用于数据存储和缓存",
+      "dependencies": {
+        "better-sqlite3": "^11.10.0",
+        "db0": "^0.3.1"
+      },
+      "devDependencies": {}
+    },
+    "logging": {
+      "description": "日志记录 - 用于调试和监控",
+      "dependencies": {
+        "consola": "^3.4.0"
+      },
+      "devDependencies": {}
+    },
+    "testing": {
+      "description": "测试相关 - 用于单元测试和集成测试",
+      "dependencies": {},
+      "devDependencies": {
+        "vitest": "^3.0.7",
+        "mockdate": "^3.0.5"
+      }
+    },
+    "development": {
+      "description": "开发工具 - 用于开发时的工具和类型定义",
+      "dependencies": {},
+      "devDependencies": {
+        "tsx": "^4.19.3",
+        "typescript": "^5.8.2",
+        "@types/react": "^19.0.10",
+        "@types/react-dom": "^19.0.4"
+      }
+    }
+  },
+  "installation": {
+    "description": "安装说明",
+    "commands": {
+      "all": "pnpm install",
+      "core_only": "pnpm add ofetch cheerio fast-xml-parser dayjs zod",
+      "dev_only": "pnpm add -D @types/md5 vitest mockdate tsx typescript",
+      "specific_category": "根据需要安装特定分类的依赖"
+    },
+    "notes": [
+      "项目使用 pnpm 作为包管理器",
+      "核心依赖是必需的，其他依赖可根据需要选择性安装",
+      "开发依赖仅在开发环境中需要",
+      "某些依赖可能需要特定的 Node.js 版本"
+    ]
+  },
+  "version_constraints": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0",
+    "typescript": ">=5.0.0"
+  },
+  "optional_dependencies": {
+    "description": "可选依赖 - 用于特定功能的增强",
+    "puppeteer": {
+      "package": "puppeteer",
+      "version": "^21.0.0",
+      "purpose": "用于需要JavaScript渲染的网站抓取",
+      "install_command": "pnpm add puppeteer"
+    },
+    "playwright": {
+      "package": "playwright",
+      "version": "^1.40.0",
+      "purpose": "用于复杂的浏览器自动化",
+      "install_command": "pnpm add playwright"
+    },
+    "jsdom": {
+      "package": "jsdom",
+      "version": "^23.0.0",
+      "purpose": "用于服务端DOM操作",
+      "install_command": "pnpm add jsdom && pnpm add -D @types/jsdom"
+    },
+    "node-html-parser": {
+      "package": "node-html-parser",
+      "version": "^6.1.0",
+      "purpose": "轻量级HTML解析器，cheerio的替代品",
+      "install_command": "pnpm add node-html-parser"
+    },
+    "axios": {
+      "package": "axios",
+      "version": "^1.6.0",
+      "purpose": "HTTP客户端，ofetch的替代品",
+      "install_command": "pnpm add axios"
+    },
+    "lodash": {
+      "package": "lodash",
+      "version": "^4.17.21",
+      "purpose": "工具函数库",
+      "install_command": "pnpm add lodash && pnpm add -D @types/lodash"
+    },
+    "moment": {
+      "package": "moment",
+      "version": "^2.29.0",
+      "purpose": "日期处理库，dayjs的替代品",
+      "install_command": "pnpm add moment"
+    },
+    "redis": {
+      "package": "redis",
+      "version": "^4.6.0",
+      "purpose": "Redis缓存客户端",
+      "install_command": "pnpm add redis"
+    }
+  },
+  "scripts": {
+    "description": "常用的npm脚本命令",
+    "install_core": "pnpm add ofetch cheerio fast-xml-parser dayjs zod consola",
+    "install_dev": "pnpm add -D @types/md5 vitest mockdate tsx typescript",
+    "install_optional": "pnpm add puppeteer jsdom lodash",
+    "update_all": "pnpm update",
+    "check_outdated": "pnpm outdated",
+    "audit": "pnpm audit"
+  },
+  "troubleshooting": {
+    "common_issues": [
+      {
+        "issue": "better-sqlite3 安装失败",
+        "solution": "确保系统有C++编译器，或使用预编译版本",
+        "command": "pnpm add better-sqlite3 --force"
+      },
+      {
+        "issue": "puppeteer 下载失败",
+        "solution": "设置代理或使用国内镜像",
+        "command": "PUPPETEER_DOWNLOAD_HOST=https://npm.taobao.org/mirrors pnpm add puppeteer"
+      },
+      {
+        "issue": "类型定义缺失",
+        "solution": "安装对应的@types包",
+        "command": "pnpm add -D @types/[package-name]"
+      },
+      {
+        "issue": "版本冲突",
+        "solution": "使用resolutions字段锁定版本",
+        "command": "在package.json中添加resolutions配置"
+      }
+    ]
+  }
+}
