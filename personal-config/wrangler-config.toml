@@ -1,0 +1,11 @@
+# 个人Cloudflare配置备份
+# 这是你的个人wrangler.toml配置
+
+name = "newsnow"
+pages_build_output_dir = "dist/output/public"
+compatibility_date = "2024-10-03"
+
+[[d1_databases]]
+binding = "NEWSNOW_DB"
+database_name = "newsnow-db"
+database_id = "f5ed4f60-6284-4ba3-8c9c-105312a2278c"
