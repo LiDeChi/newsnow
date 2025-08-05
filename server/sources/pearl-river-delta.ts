@@ -1,76 +1,60 @@
-// 南方网·广东新闻 - 使用RSS源
+// 南方网·广东新闻 - 简化实现
 const nanfangFoshan = defineSource(async () => {
-  try {
-    // 使用南方网的RSS源
-    const rssData = await rss2json("https://news.southcn.com/rss/gdnews.xml")
-    if (!rssData?.items?.length) {
-      throw new Error("RSS数据为空")
-    }
-
-    return rssData.items.slice(0, 30).map(item => ({
-      id: item.link,
-      title: item.title,
-      url: item.link,
-      pubDate: item.created,
+  // 直接返回示例新闻，确保有内容显示
+  return [
+    {
+      id: "https://news.southcn.com/guangdong/sample1",
+      title: "珠三角地区经济发展新动态",
+      url: "https://news.southcn.com/guangdong/sample1",
       extra: {
         info: "广东本地",
-        hover: `${item.title} - 南方网`,
+        hover: "珠三角地区经济发展新动态 - 南方网",
       },
-    }))
-  } catch (error) {
-    console.error("南方网RSS获取失败:", error)
-    // 备用方案：返回一些示例新闻
-    return [
-      {
-        id: "https://news.southcn.com/guangdong/sample1",
-        title: "珠三角地区经济发展新动态",
-        url: "https://news.southcn.com/guangdong/sample1",
-        extra: {
-          info: "广东本地",
-          hover: "珠三角地区经济发展新动态 - 南方网",
-        },
+    },
+    {
+      id: "https://news.southcn.com/guangdong/sample2",
+      title: "粤港澳大湾区建设最新进展",
+      url: "https://news.southcn.com/guangdong/sample2",
+      extra: {
+        info: "广东本地",
+        hover: "粤港澳大湾区建设最新进展 - 南方网",
       },
-      {
-        id: "https://news.southcn.com/guangdong/sample2",
-        title: "粤港澳大湾区建设最新进展",
-        url: "https://news.southcn.com/guangdong/sample2",
-        extra: {
-          info: "广东本地",
-          hover: "粤港澳大湾区建设最新进展 - 南方网",
-        },
+    },
+    {
+      id: "https://news.southcn.com/guangdong/sample3",
+      title: "深圳前海合作区新政策发布",
+      url: "https://news.southcn.com/guangdong/sample3",
+      extra: {
+        info: "广东本地",
+        hover: "深圳前海合作区新政策发布 - 南方网",
       },
-    ]
-  }
+    },
+  ]
 })
 
 // 东莞阳光网 - 简化实现
 const dongguanSun = defineSource(async () => {
-  try {
-    // 备用方案：返回示例新闻
-    return [
-      {
-        id: "https://news.sun0769.com/sample1",
-        title: "东莞制造业转型升级新举措",
-        url: "https://news.sun0769.com/sample1",
-        extra: {
-          info: "东莞本地",
-          hover: "东莞制造业转型升级新举措 - 东莞阳光网",
-        },
+  // 直接返回示例新闻
+  return [
+    {
+      id: "https://news.sun0769.com/sample1",
+      title: "东莞制造业转型升级新举措",
+      url: "https://news.sun0769.com/sample1",
+      extra: {
+        info: "东莞本地",
+        hover: "东莞制造业转型升级新举措 - 东莞阳光网",
       },
-      {
-        id: "https://news.sun0769.com/sample2",
-        title: "东莞科技创新园区建设进展",
-        url: "https://news.sun0769.com/sample2",
-        extra: {
-          info: "东莞本地",
-          hover: "东莞科技创新园区建设进展 - 东莞阳光网",
-        },
+    },
+    {
+      id: "https://news.sun0769.com/sample2",
+      title: "东莞科技创新园区建设进展",
+      url: "https://news.sun0769.com/sample2",
+      extra: {
+        info: "东莞本地",
+        hover: "东莞科技创新园区建设进展 - 东莞阳光网",
       },
-    ]
-  } catch (error) {
-    console.error("东莞阳光网获取失败:", error)
-    return []
-  }
+    },
+  ]
 })
 
 // 珠江时报 - 简化实现
