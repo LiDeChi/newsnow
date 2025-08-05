@@ -1,9 +1,10 @@
-// 南方网·广东新闻 - 简化实现
+// 南方网·广东新闻 - 测试实现
 const nanfangFoshan = defineSource(async () => {
+  console.log("珠三角新闻源被调用")
   // 直接返回示例新闻，确保有内容显示
   return [
     {
-      id: "https://news.southcn.com/guangdong/sample1",
+      id: "sample1",
       title: "珠三角地区经济发展新动态",
       url: "https://news.southcn.com/guangdong/sample1",
       extra: {
@@ -12,7 +13,7 @@ const nanfangFoshan = defineSource(async () => {
       },
     },
     {
-      id: "https://news.southcn.com/guangdong/sample2",
+      id: "sample2",
       title: "粤港澳大湾区建设最新进展",
       url: "https://news.southcn.com/guangdong/sample2",
       extra: {
@@ -21,7 +22,7 @@ const nanfangFoshan = defineSource(async () => {
       },
     },
     {
-      id: "https://news.southcn.com/guangdong/sample3",
+      id: "sample3",
       title: "深圳前海合作区新政策发布",
       url: "https://news.southcn.com/guangdong/sample3",
       extra: {
