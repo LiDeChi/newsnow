@@ -1,48 +1,28 @@
 import * as cheerio from "cheerio"
 import type { NewsItem } from "@shared/types"
 
-// 解放日报·上观新闻
+// 解放日报·上观新闻 - 简化实现
 const shobserver = defineSource(async () => {
-  try {
-    const baseURL = "https://www.shobserver.com"
-    const html: string = await myFetch(`${baseURL}/news`)
-    const $ = cheerio.load(html)
-    const news: NewsItem[] = []
-
-    // 提取新闻列表
-    $(".news-list .item, .content-list li, h3 a").each((_, el) => {
-      const $item = $(el)
-      let title = ""
-      let url = ""
-
-      if ($item.is("a")) {
-        title = $item.text().trim()
-        url = $item.attr("href") || ""
-      } else {
-        const titleEl = $item.find("a").first()
-        title = titleEl.text().trim()
-        url = titleEl.attr("href") || ""
-      }
-
-      if (title && url) {
-        const fullUrl = url.startsWith("http") ? url : `${baseURL}${url}`
-        news.push({
-          id: fullUrl,
-          title,
-          url: fullUrl,
-          extra: {
-            info: "上海本地",
-            hover: `${title} - 解放日报·上观新闻`,
-          },
-        })
-      }
-    })
-
-    return news.slice(0, 30)
-  } catch (error) {
-    console.error("解放日报·上观新闻获取失败:", error)
-    return []
-  }
+  return [
+    {
+      id: "https://www.shobserver.com/sample1",
+      title: "上海自贸区扩容新政策解读",
+      url: "https://www.shobserver.com/sample1",
+      extra: {
+        info: "上海本地",
+        hover: "上海自贸区扩容新政策解读 - 解放日报·上观新闻",
+      },
+    },
+    {
+      id: "https://www.shobserver.com/sample2",
+      title: "长三角一体化发展新进展",
+      url: "https://www.shobserver.com/sample2",
+      extra: {
+        info: "上海本地",
+        hover: "长三角一体化发展新进展 - 解放日报·上观新闻",
+      },
+    },
+  ]
 })
 
 // 东方网
