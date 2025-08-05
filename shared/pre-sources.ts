@@ -394,6 +394,116 @@ export const originSources = {
     title: "热点资讯",
     home: "https://www.ifeng.com",
   },
+  // 珠三角地区新闻源
+  "pearl-river-delta": {
+    name: "珠三角新闻",
+    column: "china",
+    color: "emerald",
+    interval: Time.Common,
+    home: "http://fs.southcn.com",
+    sub: {
+      "nanfang-foshan": {
+        title: "南方网·佛山",
+        interval: Time.Common,
+      },
+      "dongguan-sun": {
+        title: "东莞阳光网",
+        interval: Time.Common,
+      },
+      "zhujiang-times": {
+        title: "珠江时报",
+        interval: Time.Common,
+      },
+      "guangzhou-daily": {
+        title: "广州日报",
+        interval: Time.Common,
+      },
+      "foshan-news": {
+        title: "佛山新闻网",
+        interval: Time.Common,
+      },
+    },
+  },
+  // 长三角地区新闻源
+  "yangtze-river-delta": {
+    name: "长三角新闻",
+    column: "china",
+    color: "cyan",
+    interval: Time.Common,
+    home: "https://www.shobserver.com",
+    sub: {
+      "shobserver": {
+        title: "解放日报·上观",
+        interval: Time.Common,
+      },
+      "eastday": {
+        title: "东方网",
+        interval: Time.Common,
+      },
+      "jhnews": {
+        title: "新华日报·交汇点",
+        interval: Time.Common,
+      },
+      "xdkb": {
+        title: "现代快报",
+        interval: Time.Common,
+      },
+      "zjol": {
+        title: "浙江在线",
+        interval: Time.Common,
+      },
+      "hangzhou-news": {
+        title: "杭州网",
+        interval: Time.Common,
+      },
+      "anhuinews": {
+        title: "安徽日报·中安在线",
+        interval: Time.Common,
+      },
+    },
+  },
+  // 京津冀地区新闻源
+  "beijing-tianjin-hebei": {
+    name: "京津冀新闻",
+    column: "china",
+    color: "amber",
+    interval: Time.Common,
+    home: "http://www.qianlong.com",
+    sub: {
+      "qianlong": {
+        title: "千龙网",
+        interval: Time.Common,
+      },
+      "enorth": {
+        title: "北方网",
+        interval: Time.Common,
+      },
+      "hebnews": {
+        title: "长城网",
+        interval: Time.Common,
+      },
+      "jjjnews": {
+        title: "京津冀网",
+        interval: Time.Common,
+      },
+      "xiongan-gov": {
+        title: "雄安官网",
+        interval: Time.Common,
+      },
+      "tianjin-daily": {
+        title: "天津日报",
+        interval: Time.Common,
+      },
+      "hebei-daily": {
+        title: "河北日报",
+        interval: Time.Common,
+      },
+      "beijing-daily": {
+        title: "北京日报",
+        interval: Time.Common,
+      },
+    },
+  },
   "chongbuluo": {
     name: "虫部落",
     column: "china",

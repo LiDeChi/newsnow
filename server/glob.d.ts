@@ -3,6 +3,7 @@
 declare module 'glob:./sources/{*.ts,**/index.ts}' {
   export const _36kr: typeof import('./sources/_36kr')
   export const baidu: typeof import('./sources/baidu')
+  export const beijingTianjinHebei: typeof import('./sources/beijing-tianjin-hebei')
   export const bilibili: typeof import('./sources/bilibili')
   export const cankaoxiaoxi: typeof import('./sources/cankaoxiaoxi')
   export const chongbuluo: typeof import('./sources/chongbuluo')
@@ -25,6 +26,7 @@ declare module 'glob:./sources/{*.ts,**/index.ts}' {
   export const mktnews: typeof import('./sources/mktnews')
   export const nowcoder: typeof import('./sources/nowcoder')
   export const pcbeta: typeof import('./sources/pcbeta')
+  export const pearlRiverDelta: typeof import('./sources/pearl-river-delta')
   export const producthunt: typeof import('./sources/producthunt')
   export const smzdm: typeof import('./sources/smzdm')
   export const solidot: typeof import('./sources/solidot')
@@ -37,6 +39,7 @@ declare module 'glob:./sources/{*.ts,**/index.ts}' {
   export const wallstreetcn: typeof import('./sources/wallstreetcn')
   export const weibo: typeof import('./sources/weibo')
   export const xueqiu: typeof import('./sources/xueqiu')
+  export const yangtzeRiverDelta: typeof import('./sources/yangtze-river-delta')
   export const zaobao: typeof import('./sources/zaobao')
   export const zhihu: typeof import('./sources/zhihu')
 }

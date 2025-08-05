@@ -447,6 +447,193 @@
     "color": "red",
     "interval": 600000
   },
+  "pearl-river-delta": {
+    "redirect": "pearl-river-delta-nanfang-foshan",
+    "name": "珠三角新闻",
+    "column": "china",
+    "home": "http://fs.southcn.com",
+    "color": "emerald",
+    "interval": 1800000,
+    "title": "南方网·佛山"
+  },
+  "pearl-river-delta-nanfang-foshan": {
+    "name": "珠三角新闻",
+    "column": "china",
+    "home": "http://fs.southcn.com",
+    "color": "emerald",
+    "interval": 1800000,
+    "title": "南方网·佛山"
+  },
+  "pearl-river-delta-dongguan-sun": {
+    "name": "珠三角新闻",
+    "column": "china",
+    "home": "http://fs.southcn.com",
+    "color": "emerald",
+    "interval": 1800000,
+    "title": "东莞阳光网"
+  },
+  "pearl-river-delta-zhujiang-times": {
+    "name": "珠三角新闻",
+    "column": "china",
+    "home": "http://fs.southcn.com",
+    "color": "emerald",
+    "interval": 1800000,
+    "title": "珠江时报"
+  },
+  "pearl-river-delta-guangzhou-daily": {
+    "name": "珠三角新闻",
+    "column": "china",
+    "home": "http://fs.southcn.com",
+    "color": "emerald",
+    "interval": 1800000,
+    "title": "广州日报"
+  },
+  "pearl-river-delta-foshan-news": {
+    "name": "珠三角新闻",
+    "column": "china",
+    "home": "http://fs.southcn.com",
+    "color": "emerald",
+    "interval": 1800000,
+    "title": "佛山新闻网"
+  },
+  "yangtze-river-delta": {
+    "redirect": "yangtze-river-delta-shobserver",
+    "name": "长三角新闻",
+    "column": "china",
+    "home": "https://www.shobserver.com",
+    "color": "cyan",
+    "interval": 1800000,
+    "title": "解放日报·上观"
+  },
+  "yangtze-river-delta-shobserver": {
+    "name": "长三角新闻",
+    "column": "china",
+    "home": "https://www.shobserver.com",
+    "color": "cyan",
+    "interval": 1800000,
+    "title": "解放日报·上观"
+  },
+  "yangtze-river-delta-eastday": {
+    "name": "长三角新闻",
+    "column": "china",
+    "home": "https://www.shobserver.com",
+    "color": "cyan",
+    "interval": 1800000,
+    "title": "东方网"
+  },
+  "yangtze-river-delta-jhnews": {
+    "name": "长三角新闻",
+    "column": "china",
+    "home": "https://www.shobserver.com",
+    "color": "cyan",
+    "interval": 1800000,
+    "title": "新华日报·交汇点"
+  },
+  "yangtze-river-delta-xdkb": {
+    "name": "长三角新闻",
+    "column": "china",
+    "home": "https://www.shobserver.com",
+    "color": "cyan",
+    "interval": 1800000,
+    "title": "现代快报"
+  },
+  "yangtze-river-delta-zjol": {
+    "name": "长三角新闻",
+    "column": "china",
+    "home": "https://www.shobserver.com",
+    "color": "cyan",
+    "interval": 1800000,
+    "title": "浙江在线"
+  },
+  "yangtze-river-delta-hangzhou-news": {
+    "name": "长三角新闻",
+    "column": "china",
+    "home": "https://www.shobserver.com",
+    "color": "cyan",
+    "interval": 1800000,
+    "title": "杭州网"
+  },
+  "yangtze-river-delta-anhuinews": {
+    "name": "长三角新闻",
+    "column": "china",
+    "home": "https://www.shobserver.com",
+    "color": "cyan",
+    "interval": 1800000,
+    "title": "安徽日报·中安在线"
+  },
+  "beijing-tianjin-hebei": {
+    "redirect": "beijing-tianjin-hebei-qianlong",
+    "name": "京津冀新闻",
+    "column": "china",
+    "home": "http://www.qianlong.com",
+    "color": "amber",
+    "interval": 1800000,
+    "title": "千龙网"
+  },
+  "beijing-tianjin-hebei-qianlong": {
+    "name": "京津冀新闻",
+    "column": "china",
+    "home": "http://www.qianlong.com",
+    "color": "amber",
+    "interval": 1800000,
+    "title": "千龙网"
+  },
+  "beijing-tianjin-hebei-enorth": {
+    "name": "京津冀新闻",
+    "column": "china",
+    "home": "http://www.qianlong.com",
+    "color": "amber",
+    "interval": 1800000,
+    "title": "北方网"
+  },
+  "beijing-tianjin-hebei-hebnews": {
+    "name": "京津冀新闻",
+    "column": "china",
+    "home": "http://www.qianlong.com",
+    "color": "amber",
+    "interval": 1800000,
+    "title": "长城网"
+  },
+  "beijing-tianjin-hebei-jjjnews": {
+    "name": "京津冀新闻",
+    "column": "china",
+    "home": "http://www.qianlong.com",
+    "color": "amber",
+    "interval": 1800000,
+    "title": "京津冀网"
+  },
+  "beijing-tianjin-hebei-xiongan-gov": {
+    "name": "京津冀新闻",
+    "column": "china",
+    "home": "http://www.qianlong.com",
+    "color": "amber",
+    "interval": 1800000,
+    "title": "雄安官网"
+  },
+  "beijing-tianjin-hebei-tianjin-daily": {
+    "name": "京津冀新闻",
+    "column": "china",
+    "home": "http://www.qianlong.com",
+    "color": "amber",
+    "interval": 1800000,
+    "title": "天津日报"
+  },
+  "beijing-tianjin-hebei-hebei-daily": {
+    "name": "京津冀新闻",
+    "column": "china",
+    "home": "http://www.qianlong.com",
+    "color": "amber",
+    "interval": 1800000,
+    "title": "河北日报"
+  },
+  "beijing-tianjin-hebei-beijing-daily": {
+    "name": "京津冀新闻",
+    "column": "china",
+    "home": "http://www.qianlong.com",
+    "color": "amber",
+    "interval": 1800000,
+    "title": "北京日报"
+  },
   "chongbuluo": {
     "redirect": "chongbuluo-latest",
     "name": "虫部落",
