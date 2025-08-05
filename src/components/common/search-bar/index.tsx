@@ -3,6 +3,7 @@ import { useMount } from "react-use"
 import type { SourceID } from "@shared/types"
 import { useMemo, useRef, useState } from "react"
 import pinyin from "@shared/pinyin.json"
+import { columns } from "@shared/metadata"
 import { OverlayScrollbar } from "../overlay-scrollbar"
 import { CardWrapper } from "~/components/column/card"
 
@@ -41,7 +42,7 @@ export function SearchBar() {
   const sourceItems = useMemo(
     () =>
       groupByColumn(typeSafeObjectEntries(sources)
-        .filter(([_, source]) => !source.redirect)
+        .filter(([_, source]) => !source.redirect || source.column === "china")
         .map(([k, source]) => ({
           id: k,
           title: source.title,
