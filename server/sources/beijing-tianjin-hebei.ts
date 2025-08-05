@@ -275,12 +275,12 @@ const beijingDaily = defineRSSHubSource("/baijiahao/author/北京日报", {
 
 export default defineSource({
   "beijing-tianjin-hebei": qianlong,
-  "qianlong": qianlong,
-  "enorth": enorth,
-  "hebnews": hebnews,
-  "jjjnews": jjjnews,
-  "xiongan-gov": xionganGov,
-  "tianjin-daily": tianjinDaily,
-  "hebei-daily": hebeiDaily,
-  "beijing-daily": beijingDaily,
+  "beijing-tianjin-hebei-qianlong": qianlong,
+  "beijing-tianjin-hebei-enorth": enorth,
+  "beijing-tianjin-hebei-hebnews": hebnews,
+  "beijing-tianjin-hebei-jjjnews": jjjnews,
+  "beijing-tianjin-hebei-xiongan-gov": xionganGov,
+  "beijing-tianjin-hebei-tianjin-daily": tianjinDaily,
+  "beijing-tianjin-hebei-hebei-daily": hebeiDaily,
+  "beijing-tianjin-hebei-beijing-daily": beijingDaily,
 } as any)

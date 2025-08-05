@@ -275,11 +275,11 @@ const anhuinews = defineSource(async () => {
 
 export default defineSource({
   "yangtze-river-delta": shobserver,
-  "shobserver": shobserver,
-  "eastday": eastday,
-  "jhnews": jhnews,
-  "xdkb": xdkb,
-  "zjol": zjol,
-  "hangzhou-news": hangzhouNews,
-  "anhuinews": anhuinews,
+  "yangtze-river-delta-shobserver": shobserver,
+  "yangtze-river-delta-eastday": eastday,
+  "yangtze-river-delta-jhnews": jhnews,
+  "yangtze-river-delta-xdkb": xdkb,
+  "yangtze-river-delta-zjol": zjol,
+  "yangtze-river-delta-hangzhou-news": hangzhouNews,
+  "yangtze-river-delta-anhuinews": anhuinews,
 } as any)

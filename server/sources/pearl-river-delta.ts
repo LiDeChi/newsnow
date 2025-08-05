@@ -129,9 +129,9 @@ const foshanNews = defineRSSHubSource("/baijiahao/author/佛山新闻网", {
 
 export default defineSource({
   "pearl-river-delta": nanfangFoshan,
-  "nanfang-foshan": nanfangFoshan,
-  "dongguan-sun": dongguanSun,
-  "zhujiang-times": zhujiangTimes,
-  "guangzhou-daily": guangzhouDaily,
-  "foshan-news": foshanNews,
+  "pearl-river-delta-nanfang-foshan": nanfangFoshan,
+  "pearl-river-delta-dongguan-sun": dongguanSun,
+  "pearl-river-delta-zhujiang-times": zhujiangTimes,
+  "pearl-river-delta-guangzhou-daily": guangzhouDaily,
+  "pearl-river-delta-foshan-news": foshanNews,
 } as any)
