@@ -43,7 +43,9 @@ export function RollopGlob(): Plugin {
       const contents = files.map((file) => {
         const r = file.replace("/index", "")
         const name = path.basename(r, path.extname(r))
-        return `export * as ${name} from '${file}'\n`
+        // Convert kebab-case to camelCase for valid JavaScript variable names
+        const camelCaseName = name.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase())
+        return `export * as ${camelCaseName} from '${file}'\n`
       }).join("\n")
 
       await writeTypeDeclaration(map, path.join(root, "glob"))
@@ -70,7 +72,9 @@ async function writeTypeDeclaration(map: GlobMap, filename: string) {
       const relative = `./${relatePath(file)}`.replace(/\.tsx?$/, "")
       const r = file.replace("/index", "")
       const fileName = path.basename(r, path.extname(r))
-      declare += `  export const ${fileName}: typeof import('${relative}')\n`
+      // Convert kebab-case to camelCase for valid JavaScript variable names
+      const camelCaseFileName = fileName.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase())
+      declare += `  export const ${camelCaseFileName}: typeof import('${relative}')\n`
     }
     declare += `}\n`
   }
